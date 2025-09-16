@@ -4,6 +4,6 @@
     <title>Minha Página Simples</title>
 </head>
 <body>
-    <h1>Olá, GitHub Actions!</h1>
+    <h1>Oláa, GitHub Actions!</h1>
 </body>
 </html>
