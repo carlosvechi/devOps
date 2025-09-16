@@ -1,27 +1,26 @@
 name: Deploy Simples
 
-# Dispara a ação sempre que houver push no repositório
 on:
   push:
     branches:
-      - main  # ou master, dependendo do seu repositório
+      - main  # ou master, se for seu branch principal
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do repositório
-      uses: actions/checkout@v3
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
 
-    - name: Build Simples
-      run: echo "Deploy bem-sucedido"
+      - name: Build Simples
+        run: echo "Deploy bem-sucedido"
 
-    - name: Criar artefato
-      run: echo "Arquivo de sucesso" > sucesso.txt
+      - name: Criar artefato
+        run: echo "Arquivo de sucesso" > sucesso.txt
 
-    - name: Upload do artefato
-      uses: actions/upload-artifact@v3
-      with:
-        name: deploy-sucesso
-        path: sucesso.txt
+      - name: Upload do artefato
+        uses: actions/upload-artifact@v3
+        with:
+          name: deploy-sucesso
+          path: sucesso.txt
